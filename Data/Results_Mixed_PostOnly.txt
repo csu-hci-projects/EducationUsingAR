@@ -1,0 +1,49 @@
+DV: Points on Quiz (5 max)
+F1: .
+F2: .
+F3: .
+F4: .
+F5: Group
+F6: .
+F7: .
+2 G1
+5 G1
+4 G1
+5 G1
+4 G1
+4 G2
+5 G2
+5 G2
+2 G2
+4 G2
+
+ANOVA_table_for_Points on Quiz (5 max)
+=================================================================================
+Effect                        df        SS            MS         F        p      
+---------------------------------------------------------------------------------
+Group                          1         0.000         0.000     0.000    1.0000
+Residual                       8        12.000         1.500    
+=================================================================================
+Data_file: Data_Mixed_PostOnly.txt
+
+Summary statement:
+The effect of group on points on quiz was not statistically significant (F(1, 8) = 0.000, ns).
+
+=============================
+----- MAIN EFFECT MEANS -----
+=============================
+Grand mean: 4.0
+Participant means: 
+   P0=2
+   P1=5
+   P2=4
+   P3=5
+   P4=4
+   P5=4
+   P6=5
+   P7=5
+   P8=2
+   P9=4
+Group means: 
+   G1=4
+   G2=4

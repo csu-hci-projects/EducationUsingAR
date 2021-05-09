@@ -1,0 +1,57 @@
+DV: Points on Quiz (5 max)
+F1: Learning Stage, Pre-learning, Post-learning
+F2: .
+F3: .
+F4: .
+F5: Group
+F6: .
+F7: .
+3 2 G1
+2 5 G1
+3 4 G1
+1 5 G1
+1 4 G1
+3 4 G2
+3 5 G2
+1 5 G2
+1 2 G2
+2 4 G2
+
+ANOVA_table_for_Points on Quiz (5 max)
+=================================================================================
+Effect                        df        SS            MS         F        p      
+---------------------------------------------------------------------------------
+Group                          1         0.000         0.000     0.000    1.0000
+Participant(Group)             8         9.000         1.125    
+Learning Stage                 1        20.000        20.000    14.545    0.0051
+Learning Stage_x_Group         1         0.000         0.000     0.000    1.0000
+Learning Stage_x_P(group)      8        11.000         1.375    
+=================================================================================
+Data_file: Data_Mixed.txt
+
+Summary statements:
+The effect of group on points on quiz was not statistically significant (F(1, 8) = 0.000, ns).
+The effect of learning stage on points on quiz was statistically significant (F(1, 8) = 14.545, p < .01).
+The learning stage_x_group interaction effect was not statistically significant (F(1, 8) = 0.000, ns).
+
+=============================
+----- MAIN EFFECT MEANS -----
+=============================
+Grand mean: 3.0
+Participant means: 
+   P0=2.50000
+   P1=3.50000
+   P2=3.50000
+   P3=3
+   P4=2.50000
+   P5=3.50000
+   P6=4
+   P7=3
+   P8=1.50000
+   P9=3
+Learning Stage means: 
+   Pre-learning=2.00000
+   Post-learning=4
+Group means: 
+   G1=3
+   G2=3.00000
