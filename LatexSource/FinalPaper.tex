@@ -1,0 +1,148 @@
+\documentclass[sigconf]{acmart}
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+    
+\acmConference[Fort Collins '21]{CS 464 Final Project: AR in CS Education}{}{Fort Collins, CO}
+
+\begin{document}
+
+\title{Augmented Reality in Online Computer Science Education}
+
+\author{Jack Fraser}
+\email{jackzf@rams.colostate.edu}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Fort Collins}
+  \state{Colorado}
+  \country{USA}
+}
+
+\renewcommand{\shortauthors}{Fraser}
+
+\begin{abstract}
+  This research investigated the effectiveness of augmented reality in education, specifically in the subject of Computer Science. This was accomplished through the creation of two sets of learning material, one standard text-based and the other using augmented reality, along with a quiz on the subject matter and a survey which collected subjective information from the participants. The participants took the quiz before they interacted with the learning material as a benchmark and then again after studying the material to see how their knowledge changed. The subject of this material was the merge sort algorithm due to its simplicity and predisposition for visualization. It was found that there was no significant difference between the standard and augmented reality learning materials on learning outcome.
+\end{abstract}
+
+\keywords{augmented reality, education, remote learning}
+
+\maketitle
+
+\section{Introduction}
+As a student during the COVID-19 pandemic, I believe I have the authority to say that learning has been nowhere near how it is normally. An extremely quick shift to online learning happened in the middle of a semester. Professors had to develop a completely new curriculum in around a week, and implement it on platforms which they were largely unfamiliar with (such as Zoom, Microsoft Teams, and more). Being a part of this shift has given me a great deal of interest in how to make remote learning better in general. In my mind, remote learning has been a mess of disorganization, chaotic info-dumps, lack of communication, tons of sadness, and a lack of motivation and engagement. Of course, this is not necessarily the case for all students, however I have found through discussions with other students that these sentiments are shared by many.
+
+Now it goes nearly unsaid that not all of these issues with remote learning can be easily addressed and corrected. However, it must be said that at least a few of them deserve target efforts to make sure that if anything similar to this situation ever happens again, the United States education system will have the tools to handle it better. The issues that I plan to take a look at in this study are the lack of engagement which students such as myself have felt along with the actual difference in learning outcomes between face-to-face (F2F) and remote learning environments.
+
+Making course material engaging is a difficult task in itself, and is an area which many have worked in before me. The spin that I would like to take on it is one which involves Augmented Reality (AR). AR is a technology similar to Virtual Reality (VR), which many people are already familiar with, which separates itself therefrom by including the real world around the user. Simple forms of AR can be seen on almost any smartphone by downloading one of many apps that use it. A personal favorite of mine is Pokemon Go, which has an AR feature that can be enabled, allowing the player to see the Pokemon they are trying to catch standing directly in front of them! The phone's camera is used to take in the environment, which then has media displayed directly over it. This is great for games, treasure hunts, and many other forms of entertainment, but I believe it can also be applied quite well in the area of education, an opinion reflected in studies done by others in the past.
+
+\subsection{Motivation}
+Online education is a hot topic at the moment, to say the least. The COVID-19 pandemic has forced the systems of education in the United States to shift to a very new modality: remote learning. This mode of teaching and learning has only recently been used, as the technology that allows for it has become more and more pervasive across the country. The general idea is that because every student today most likely has some form internet-capable device at home, it is possible to shift learning to be completely online. This has allowed for the country's students, in every grade and in higher learning, to stay at home during a time when that has become necessary to maintain public health safety nationwide. This new style of learning, however, has its drawbacks, and does not work for everybody \cite{kearsley02}.
+
+One of these many drawbacks that remote learning includes is a much higher difficulty in keeping students engaged. When students are constantly at home without access to the resources they normally have at their disposal, and with many more distractions at arms' reach, keeping learning outcomes at the same levels as with F2F classes is incredibly tough to manage. This leaves plenty of room for innovation and new techniques or technologies. This gaping hole needs to be filled, which is what has motivated me to look into the efficacy of AR in learning. If a technology such as AR that has been around for a while, but still has room to grow, can be applied to make the learning outcomes of online students better, then it is something which should be looked into as soon as possible.
+
+\subsection{Related Work}
+Plenty of work has been done in the past that looks into Augmented Reality and its possible uses in education. My hope is to build off what these previous studies and reviews have found, taking heed of the pitfalls already discovered and therefore contributing to this overarching body of work. The main reason that AR has been looked into over time is for the many possible benefits that it could offer in a learning environment, beyond that of traditional educational technologies.
+
+Liarokapis et al. did research on this specifically in the field of mechanical engineering education. The authors configured an XML-based multimedia framework in order to investigate how 3D Web content (Web3D) and AR could be used to enrich the delivery of lectures. They found that students being able to explore a 3D representation of the objects in the material enabled them to understand the material more effectively \cite{liarokapis04}.
+
+This finding can be explained somewhat by Billinghurst, as he describes how AR interfaces offer seamless interaction between the real and virtual worlds, a tangible interface metaphor, and a means for transitioning between the real and virtual worlds \cite{billinghurst02}. These are all characteristics that can be applied in an educational environment, and in my case the tangible interface metaphor could be quite beneficial.
+
+Lee also investigated applications of AR in education and training, analyzing its uses in different fields and finding that it has a great future, as it can provide interactive education with simplicity, contextual information to benefit learning, and the ability to promote efficiency and effectiveness \cite{lee12}. These benefits could help greatly when considering educational methodologies to provide the best experience online.
+
+AR also has the potential to foster student creativity and imagination, help students take control of their learning at their own pace, and create an authentic learning environment suitable to various learning styles \cite{yuen11}. These are very important pieces of education that can be lost when learning online, the addition of which would be incredibly helpful to distance learners.
+
+In a review of 55 studies published in the area of AR in education, Chen et al. concluded that AR is effective for activities where students learn things that could not be seen in the real world, and learning abstract or complex topics \cite{chen17}. This is a perfect benefit to education in Computer Science (CS), as the field is filled with abstract concepts that can be difficult for learners to wrestle with.
+
+This distinct context within CS means that AR must be applied carefully, and that it will involve representation of abstract metaphors and symbolism (such as algorithm structures or memory allocation), rather than overlaying direct information or manipulating virtual simulations \cite{resnyansky18}. This is shown in my project in the choice of what will be displayed in the AR environment, such as GIFs of search algorithms or 3D representations of data structures.
+
+A similar concept is shown in the work of Kose et al., through the development of an AR based mobile software to support learning experiences in CS courses. Their software showed effective and successful performance in improving these learning experiences, which gives me hope for what I can do in my own work \cite{kose13}.
+
+An important piece of working in education is also the actual pedagogy and instructional design \cite{kesim12}. The utilization of this technology alone does not guarantee an improvement in learning outcomes \cite{bower14}. With that in mind, the information displayed by my application must be helpful, not just visually pleasing.
+
+The usability, cost, and power usage of the technology must also be kept in mind \cite{antonioli14}. Luckily, COVID has also provided extra help in restricting the devices which can be used to develop my solution, so these are all taken care of already.
+
+\subsection{Solution Using AR}
+Because of restrictions currently in place due to the pandemic, creating a solution for this issue has some unique challenges and will restrict its capabilities by quite a lot. This online learning application has to be usable by nearly any party in their home environment without the need for special technology beyond that of what is already owned to keep it as accessible as possible. This means that it cannot use any special AR technology that would allow for the kind of interaction which would possibly help the most. The pandemic also forces the situation such that the sharing of these kinds of devices is not possible.
+
+\subsubsection{Accessibility}
+These accessibility needs and restrictions then nearly demand that the application be on the web and use nothing more than a camera, preferably one already connected to the devices that a student should already have access to. Luckily, good solutions for AR do already exist on the web that are quite accessible from nearly any browser and device, with minimal difficulty for the developer. These technologies will be further discussed in detail later in this paper. Most students also use one out of a small handful of web browsers (Firefox, Google Chrome, Safari, and Internet Explorer) on one out of a small handful of operating systems/devices (Mac, Windows, iOS, and Android). It also is helpful that whichever browsers work best can be downloaded on any of these devices, creating greater accessibility.
+
+The AR technology can then be accessed very easily by any student from their laptop or phone, as long as it involves zero to minimal interaction. This restriction will keep the application to a relatively simple design. With this in mind, the web-based AR library is able to use a form of marker/barcode to scan and then display media on top of. This marker can be loaded up on another device or printed out on a sheet of paper. This does include another device that the student needs access to, being either another phone or a printer, which lowers accessibility, but as most students have both a laptop and phone, or one of these and access to a printer, this should be a fair requirement to include.
+
+\subsubsection{Media Displayed in AR}
+The learner will simply load the application through a web browser on their device, give it access to their camera (and microphone as these permissions are generally intertwined), and then point the camera at the marker which will then have the media displayed over it. In terms of what media should be displayed, it will be best to use some form of visual representation of a CS concept. Two great categories of CS concepts for visual representation are sorting algorithms and data structures. Both of these categories lend themselves quite well to visual representation, especially due to their inherently abstract natures. Therefore, this solution will use several different markers that represent and describe one of these two categories and the processes related to them.
+
+Choosing between these two categories is somewhat difficult, as they are both good candidates. However, I believe that a sorting algorithm will be what this solution uses. Due to the wide availability of visualizations in the form of ".gif" files for sorting algorithms, it seems like a very simple option to implement. They also require slightly less knowledge of CS concepts such as pointers or how memory is handled virtually and physically. This may help allow for a more diverse set of participants, as getting the preferred set of participants for this study will be difficult because of the pandemic.
+
+\subsubsection{Choosing an Algorithm}
+Within the category of sorting algorithms there exists quite a large number of options from which to choose. The algorithm chosen to be used with this solution should be one that lends itself well to visualization, is not too complex to be learned with only a single lesson, and should have just enough substance to it that there is actually something to be learned. I believe that merge sort is the best choice for this, as I find it to be intuitive, it requires minimal knowledge of CS concepts, and because it can be shown visually very easily.
+
+\section{Design of Experiment}
+The experiment has been designed using a between-subjects framework with the main goal of investigating the difference in learning outcomes between standard and AR-assisted lesson designs, and the auxiliary goal of investigating any existing preference between learning modalities. Therefore the independent variables is the learning modality, and the dependent variable is the learning outcome, measured through correct answers on a quiz.
+
+Participants are first given a pre-learning quiz to evaluate their familiarity with the merge sort algorithm. After this they are split into two groups which will receive the two variations of learning materials. The participants are then given the materials, one group given the standard set (similar to a textbook) and the other given the AR set. These two sets of materials differ only in technology, but not content, and the participants are given the same amount of time to interact with the learning material as well (up to 30 minutes). Once they have taken their time with learning the material, the participants are given the same quiz once again to then measure how well the concepts of merge sort have been learned. After this quiz there is also a short survey to look into other subjective variables, like how engaged they felt, any preference that exists in learning methods, and other feedback regarding the material.
+
+\subsection{Participants}
+The best set of participants for a study such as this would be Computer Science students from any university that have yet to be taught about sorting algorithms, but have enough background on CS concepts in general that they would not struggle with the provided learning material. Such a group of participants was not able to be captured for this study. Instead it relied on volunteers from a high-level CS course at Colorado State University, along with some friends that didn't mind taking part in it.
+
+Unfortunately, only a single member of the high-level CS course volunteered to participate. This required me to find as many people that I knew as possible, in order to get enough participants in this study to get any sort of worthwhile results. With this difficulty in finding participants, I was happy to end up with a group of ten individuals total. Nine of these participants are friends of mine, and the final participant is the single member of the course.
+
+The participants, ten total, consisted of eight men and two women, ages 21-26. Six of the participants were familiar with CS concepts, though not specifically merge sort, and four of the participants were completely unfamiliar with any CS concepts. Five of the participants are currently enrolled in college and five are not currently in any form of schooling. This group of participants gave a good variety of education levels and amounts of familiarity with CS concepts, but was not ideal and cannot necessarily have the results successfully generalized to a wider population.
+
+\subsection{Apparatus}
+This experiment was designed to be run on almost any device that one might have today. The main tool that will be used is a web browser, whether on a laptop (Windows or Mac) or a phone (iOS or Android). The device matters much less than the browser, as some web browsers do not allow video to auto-play. Due to this restriction, the best browser on any device for this experiment was Firefox, as it still allows for the content within the AR material to be auto-played once loaded. However, on iOS devices Google Chrome also worked. The AR material was created using AR.js - a lightweight JavaScript library for the web. This allowed the material to be used by simply loading a web page which used this library and scanning markers which are provided to the participants. The markers could be either loaded on a separate device, or printed out onto paper depending on preference.
+
+\subsection{Procedure}
+The participants were split into two groups (A and B), each going through the exact same procedure, with the only difference being which set of learning material they were given. Group A was given the standard learning material and group B the AR learning material. The first step for any participant was to take a pre-learning quiz. This was a short quiz consisting of five questions meant to gauge the participant's familiarity with merge sort, as well as to get a baseline with which to compare the outcome after using the learning material. Once the quiz is complete, the participant is then given the set of learning material from which they were to study.
+
+The first set of learning material consisted of mainly text-based information, like a textbook would have, with some images to supplement the text. The second set of material utilized AR to assist with this learning. It included a link to the site that loads the AR environment, a link (and zip file) for the marker images to be either loaded on a device or printed, as well as instructions on how to use it. The participants are given 30 minutes with which to familiarize themselves with the material, before they are then given the same quiz they took before.
+
+The quiz is not changed at all, and is meant to measure the amount of knowledge the participant has gained through using the learning material provided. This quiz is then followed up by a short survey meant to investigate more qualitative variables. The survey includes questions such as, "On a scale of 1 to 5 please rate how engaged you felt with the material." Questions such as these should measure any subjective preferences the participants had, as well as get feedback on the quality of the learning material for future use.
+
+\section{Results}
+Once the participants were put through the experiment, the data was collected in a spreadsheet and analyzed using an ANOVA (Analysis of Variance) test using the GoStats software. With an input size (the number of participants) of only n = 10, this test is nowhere near as powerful as it could be, but still gave meaningful results that can be interpreted. The data compiled included from each participant: the pre-learning quiz score, post-learning quiz score, and their ratings and comments from the post-experiment survey. All of the quiz data are included in this document in Table~\ref{tab:quiz}. These first two pieces of data were analyzed in three different ways, while the survey information was used for further information but not analyzed statistically.
+
+\begin{table}
+    \caption{Compiled Data from Experiment}
+    \label{tab:quiz}
+    \begin{tabular}{ l|c|c|c }
+        \hline
+        Participant & Group & Quiz\_Pre & Quiz\_Post \\
+        \hline
+        01 & A & 3 & 2 \\
+        02 & A & 2 & 5 \\
+        03 & A & 3 & 4 \\
+        04 & A & 1 & 5 \\
+        05 & A & 1 & 4 \\
+        06 & B & 3 & 4 \\
+        07 & B & 3 & 5 \\
+        08 & B & 1 & 5 \\
+        09 & B & 1 & 2 \\
+        10 & B & 2 & 4 \\
+    \end{tabular}
+\end{table}
+
+The first analysis was done using the group that was given the standard learning material. The scores of their pre-learning tests were compared to the scores of their post-learning tests to see if the learning material had any significant effect on their knowledge and understanding of the merge sort algorithm. The ANOVA test found that the effect of pre vs. post-learning was not statistically significant, with a p value of 0.0890 (F(1, 4) = 5.000, p > 0.05). Their mean pre-learning quiz score was 2 out of 5, and their mean post-learning quiz score was 4 out of 5.
+
+The second analysis was done using the group given the AR learning materials. This was done in the same way as the previous, with the pre and post-learning scores compared to see if the learning materials had a significant effect on the scores. The effect of the pre vs. post-learning was found to be statistically significant, with a p value of 0.0217 (F(1, 4) = 13.333, p < 0.05). Their mean pre-learning quiz score was also 2 out of 5, and their mean post-learning quiz score was also 4 out of 5.
+
+The final analysis was done using the two groups combined. The post-learning quiz scores of the group given the standard materials were compared to those of the group given the AR materials to see if there was a significant difference between the outcomes of the two groups due to the different learning material. It was found that the effect of the group on the outcome of the quiz scores was not statistically significant, with a p value of 1.0 (F(1, 8) = 0.000). The mean score for each group was 4 out of 5.
+
+The after quiz survey provided useful information as well. Participants rated the quality and ease-of-use of the learning materials, along with how engaged they felt with it, on a scale of 1 to 5, with 5 being the best and 1 being the worst. All participants except one rated the quality of learning material at 5, with the other rating it at 4. The ease-of-use was rated between 3 and 5 for both sets of material, with each of the sets having the same mean of 3.4 out of 5. Group A that used the standard learning material rated their engagement with a mean of 4, and Group B that used the AR learning material rated their engagement with a mean of 4.4.
+
+\section{Discussion}
+Due to the very small input size of this study, it is somewhat difficult to say that the ANOVA test had enough power to find verifiable statistical significance. That being said, based on these results the modality of learning did not have any significant effect on the outcome of the quizzes for any of the participants. This is quite interesting, considering that the individual analyses indicated that the learning material for the augmented reality material group, but not the standard learning material group, had a significant effect on the improvement of their scores. It is very possible that this significance was found only due to the much smaller input size of n = 5 for these individual tests.
+
+The implication of these results is that AR learning materials are not necessarily better than standard learning materials, however I believe there is definitely more experimenting that needs to be done. The comments given back on the surveys also indicate that further work should be done on the matter. Two participants made statements suggesting that the AR material may have been difficult to read, and one made the comment that they ended up looking more for the answers to the quiz than reading the material thoroughly. Another participant made the comment that the AR material could work very well in the setting of a textbook, where the AR markers can be printed alongside the text to supplement the information quite well. This idea is very good, and I believe it could help to standardize the experience of using the AR material as well.
+
+\section{Limitations of the Study}
+As has been mentioned several times already, this study could have used a larger pool of participants, which is its first shortcoming. With a larger group the ANOVA test used will have a stronger power, and be able to more accurately find statistical significance from the data. The next limitation that must be discussed is that it seems most participants missed one question out of the five on the quiz. After investigation it seems that the wording in both sets of learning materials surrounding this question may have been somewhat obfuscating or unclear, possibly causing the higher percentage of incorrect answers on the question. In future studies this should be corrected for. One final issue that the study had was the AR media having a difficult time displaying depending on how the markers were displayed. It has been found that they work best with a white background surrounding them, so this should be standardized for any future experiment such that all markers display more easily.
+
+\section{Conclusion}
+Although this study would seem to suggest that AR learning materials are not a useful tool, there are many other studies out there that contradict this finding. There is definitely more work to be done in this area, and AR is still a very promising technology, especially in the field of education. I have high hopes for what this technology can do, especially in the realm of computer science, because of how AR is effective for activities where students learn things that could not be seen in the real world, and learning abstract or complex topics \cite{chen17}. It is quite possible that in the future textbooks will have markers in them that display all kinds of media alongside the information that students take in, and I am very excited to see where it goes over time, that is, as long as people continue looking into how it can be used in education.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{finalBib}
+
+\end{document}
+\endinput
